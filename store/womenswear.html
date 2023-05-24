@@ -1,1 +1,311 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nick Owens</title>
+</head>
+<body>
+<nav>
+  <ul>
+    <li onclick="navigate(this)"><a href="#" class="active"><i class="fas fa-home" aria-hidden="true"></i> Men's Wear</a></li>
+    <li onclick="navigate(this)"><a href="#"><img src = "https://cdn-icons-png.flaticon.com/512/1413/1413908.png"height=60px></a></li>
+
+ 
+    
+    <center><li onclick="navigate(this)" class="logo"><a href="#"><img src="https://github.com/WVCS/index-Nathan160/blob/main/store/Grey%20Fast%20Food%20Truck%20Round%20Logo%20(4).png?raw=true"width=100%;></a></li></center>
+    
+    
+    <li onclick="navigate(this)"><a href="#">Womens</a></li>
+    <li onclick="navigate(this)"><a href="#">Menu</a></li>
+
+  </ul>
+</nav>
+    
+    
+  </nav> 
+<br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  <br>
+  <br>
+  <br>
+  <br>
+    <br>
+  <br>
+
+
+
+  <div id="entireDiv">
+  <form autocomplete="off" action="http://www.google.com">
+    <div class="autocomplete">
+    <input id="myInput" type="text" name="box"
+           placeholder="Search...">
+    </div>
+  </form>
+    
+  
+    
+    </div>
+  
+  
+   <br>
+  <br>
+  <br>
+  
+
+  
+  <k> Women's section </k>    
+  <br>
+  <p> ALERT </p>
+<div class="alert">
+  <span class="alertclosebutton"
+   onclick="this.parentElement.style.display='none';">&times; </span> DANGER! Our insanely awesome products are selling out!! </div>
+   <br>
+ <div class="container">
+      <div id="first"> <img src="https://cdn.rickowens.eu/products/142813/large/RO01C5706_LPYML_12_01.jpg?1675336632"height=21%<p class="grab"></p>
+        <h2> Fashion vest $12568</h2></div>
+
+   
+      <div id="sec"> <img src="https://cdn.rickowens.eu/products/134728/large/RP01C5743_LBA_23_01.jpg?1667924156"height=21%<p class="grab"></p>   <h2> Epic Summer Outfit $740</h2></div>
+   
+      <div id="third"> <img src="https://cdn.rickowens.eu/products/146415/large/RO01C5959_SCH_09_01.jpg?1681475996"height=21%> <h2> Legendary Church Outfit $2346</h2></div>
+    </div>
+  
+  
+</html>
+
+<style>
+  
+  h1{
+  font-family: Helvetica;
+  color: white;
+  text-shadow: 2px 2px 5px white;
+}
+
+body{
+  background-color: grey;
+}
+
+.alert {
+  background-color: red;
+  padding: 20px;
+}
+.alertclosebutton {
+  float: right;
+  color: white;
+  cursor: pointer;
+  font-size: 6vh;
+}
+nav{
+  list-style-type: none;
+  position: fixed; 
+  width: 100vw;
+  background-color: #D5D5D5;
+  left: 0;
+  top:0;
+  z-index:100;
+  text-shadow: 2px 2px 5px white;
+}
+.navli{
+  display:inline;
+  float:right;
+  padding: 15px;
+}
+a{
+  text-decoration: none;
+  color: white;
+  font-family: Helvetica;
+}
+* {box-sizing:border-box}
+
+nav img {
+  max-width: 200px;
+}
+
+nav ul {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-evenly;
+/*   border: red 1px solid; */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+/*   border: 1px yellow solid; */
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+k {
+  margin-left: 42%;
+  font-size: 10vh;
+  text-shadow: 3px 3px 4px red;
+}
+nav a:hover {
+/*   background: bisque;
+  color: black; */
+  transition: .75s;
+  color: red;
+text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+}
+
+.logo a:hover{
+  background: black;
+}
+
+.main span::before {
+  content: "\a";
+  white-space: pre;
+}
+
+.autocomplete {
+  
+  cursor: not-allowed;
+}
+
+#myInput {
+  width: 150%;
+  background-color: red;
+}
+
+#entireDiv {
+  position:fixed;
+  left: 0;
+}
+
+ .container {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+#first {
+   
+  width: 4%;
+    justify-content: space-evenly;
+}
+
+#sec {
+    justify-content: space-evenly;
+    width: 4%;
+}
+h2 {
+  font-size: 25px;
+  
+}
+#third {
+  font-size: 10;
+    justify-content: space-evenly;
+  width: 4;
+
+}
+  
+  
+</style>
+
+
+<script>
+    function autocomplete(inp, arr) {
+
+  var currentFocus;
+
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+
+      this.parentNode.appendChild(a);
+
+      for (i = 0; i < arr.length; i++) {
+
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+
+          b = document.createElement("DIV");
+
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+
+          b.addEventListener("click", function(e) {
+
+              inp.value = this.getElementsByTagName("input")[0].value;
+
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        currentFocus++;
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        currentFocus--;
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        e.preventDefault();
+        if (currentFocus > -1) {
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    if (!x) return false;
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+var autoAnswers = ["Pants", "Shirts", "Shoes", "Furniture", "Grippers", "Chrome Track Suit", "Chrome Runners", "Plunger Hat", "9", "10", "11", "12",];
+
+autocomplete(document.getElementById("myInput"), autoAnswers);
+  
+</script>
 

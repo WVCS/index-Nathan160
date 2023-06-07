@@ -7,16 +7,20 @@
   <body>
    
     <nav>
-     <li><a href="index.html"> Home </a> </li>
-      <li><a href="https://www.powayusd.com/en-US/Schools/HS/WVHS/Calendars/Schedules/Bell-Schedule">Westview Schedule </a> </li>
-      <li><a href="noun.html">Noun Project </a> </li>
-     <li><a href="convince/Water.html"> Convince </a></li>
-       <li><a href="food/noodles.html"> Food </a></li>
-     <li><a href="event/home.html"> Event </a></li>
-     <li><a href="final/final.html"> Final </a></li>
-         <li><a href="band/band.html"> Band </a></li>
-              <li><a href="Amuse/park.html"> Park </a></li>
-          <li><a href="store/store.html"> Store </a></li>
+    <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="index.html">Home</a>
+    <a href="noun.html">Noun Project</a>
+    <a href="convince/Water.html">Convince</a>
+    <a href="food/noodles.html">Food</a>
+    <a href="event/home.html">Event</a>
+    <a href="final/final.html">Final</a>
+    <a href="band/band.html">Band</a>
+    <a href="Amuse/park.html">Park</a>
+    <a href="store/store.html">Store</a>
+  </div>
+</div>
     </nav>
    
   <center>
@@ -26,8 +30,10 @@
     
     
     </html>
-<style>
- nav{
+   
+   
+   <style>
+     nav{
   list-style-type: none;
   position: fixed;
   width: 100%;
@@ -72,4 +78,69 @@ img:hover {
   border radius: 70%;
 }
 
-   </style>
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-left: 850%;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-left: 850%;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+    
+    
+          </style>
+   
+   
+   <script>
+    /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+   </script>
